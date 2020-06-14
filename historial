@@ -1,0 +1,125 @@
+   47  yum remove kubelet kubeadm kubectl
+   52  yum install -y kubelet kubeadm kubectl
+   56  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+   59  kubectl get pods --all-namespaces
+   60  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+   65  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+   67  kubectl get nodes
+   69  kubectl get nodes
+   75  kubectl create -f ntnx-csi-rbac.yaml
+   76  kubectl get serviceaccounts -n kube-system
+   77  kubectl create -f ntnx-csi-attacher.yaml
+   79  kubectl create -f ntnx-csi-node.yaml
+   80  kubectl create -f ntnx-csi-provisioner.yaml
+   81  kubectl get pods -n kube-system
+   93  kubectl get sc
+   95  kubectl create -f sc.yaml 
+   97  kubectl get sc
+  100  kubectl ntnx-secret.yaml 
+  101  kubectl create -f ntnx-secret.yaml 
+  109  kubectl create -f claim1.yaml 
+  111  kubectl create -f rc-nginx.yaml 
+  113  kubectl get po
+  114  kubectl describe po server-wtxwv
+  115  kubectl get r
+  116  kubectl get rc
+  117  kubectl describe rc server
+  119  kubectl describe rc server
+  121  kubectl describe rc server
+  122  kubectl describe po server-wtxwv
+  124  kubectl get sc
+  125  kubectl get pv
+  126  kubectl get pvc
+  127  kubectl get pods
+  128  kubectl get ns
+  129  kubectl get po -n kube-system
+  130  kubectl get rc -n kube-system
+  131  kubectl get daemonsets -n kube-system
+  132  kubectl get serviceaccounts -n kube-system
+  133  kubectl get clusterrole -n kube-system
+  134  kubectl get clusterrolebinding -n kube-system
+  135  kubectl get clusterrolebinding -n kube-system | grep csi
+  136  kubectl get pods -n kube-system | grep csi
+  137  kubectl get secret
+  141  kubectl delete -f *.yaml
+  142  kubectl delete -f sc.yaml 
+  143  kubectl delete -f rc-nginx.yaml 
+  144  kubectl delete -f ntnx-secret.yaml 
+  145  kubectl delete -f claim1.yaml 
+  150  kubectl delete -f ntnx-csi-node.yaml 
+  151  kubectl delete -f ntnx-csi-provisioner.yaml 
+  152  kubectl delete -f ntnx-csi-rbac.yaml 
+  153  kubectl delete -f ntnx-csi-attacher.yaml 
+  161  kubectl create -f rbac.yaml 
+  163  kubectl create -f attacher.yaml 
+  164  kubectl delete -f rbac.yaml 
+  190  kubectl create -f ntnx-csi-rbac.yaml 
+  191  kubectl get serviceaccounts -n kube-system
+  192  kubectl get clusterrole -n kube-system
+  193  kubectl get clusterrolebinding -n kube-system
+  194  kubectl create -f ntnx-csi-node.yaml
+  196  kubectl create -f ntnx-csi-provisioner.yaml
+  198  kubectl get pods -n kube-system
+  201  kubectl create -f csi-driver.yaml 
+  208  kubectl create -f sc.yaml 
+  214  kubectl create -f ntnx-secret.yaml 
+  217  kubectl create -f claim1.yaml 
+  218  kubectl get po
+  219  kubectl get po -n kube-system
+  224  kubectl create -f pod.yaml 
+  226  kubectl create -f pod.yaml 
+  228  kubectl create -f pod.yaml 
+  230  kubectl create -f pod.yaml 
+  232  kubectl create -f pod.yaml 
+  234  kubectl create -f pod.yaml 
+  236  kubectl create -f pod.yaml 
+  238  kubectl create -f pod.yaml 
+  240  kubectl create -f pod.yaml 
+  242  kubectl create -f cat rc-nginx.yaml 
+  244  kubectl create -f rc-nginx.yaml 
+  245  kubectl get ño
+  246  kubectl get po
+  247  kubectl get rc
+  248  kubectl get po
+  249  kubectl describe po server-kq5ld
+  250  kubectl get po
+  251  kubectl get pv
+  252  kubectl get pvc
+  253  curl --insecure -sfL https://16.16.100.46/v3/import/vvqccxsbbc2pgxz7mk27tdrlkjk44g49tkfcs5bnlvl5kr7ppb8r55.yaml | kubectl apply -f -
+  262  kubectl delete -f claim1.yaml 
+  263  kubectl delete -f ntnx-secret.yaml 
+  264  kubectl delete -frc
+  265  kubectl delete -f rc-nginx.yaml 
+  266  kubectl delete -f sc
+  267  kubectl delete -f sc.yaml 
+  272  kubectl delete -f csi-driver.yaml 
+  273  kubectl delete -f ntnx-csi-node.yaml 
+  274  kubectl delete -f ntnx-csi-provisioner.yaml 
+  275  kubectl delete -f ntnx-csi-rbac.yaml 
+  276  kubectl get sc
+  311  kubectl create -f ntnx-csi-rbac.yaml 
+  312  kubectl -n kube-system get serviceaccounts | grep csi
+  313  kubectl delete -f ntnx-csi-rbac.yaml 
+  314  kubectl -n kube-system get serviceaccounts | grep csi
+  315  kubectl create -f ntnx-csi-rbac.yaml 
+  316  kubectl -n kube-system get clusterrole | grep -e csi -e runner
+  317  kubectl -n kube-system get clusterrolebinding  | grep -e csi
+  318  kubectl create -f ./ntnx-csi-node.yaml
+  319  kubectl create -f ./ntnx-csi-provisioner.yaml
+  320  kubectl get pods -n kube-system | grep csi
+  321  kubectl -n kube-system get ds,sts
+  322   kubectl -n kube-system get etc
+  325  kubectl create -f csi-driver.yaml 
+  341  kubectl create -f ntnx-secret.yaml 
+  343  kubectl create -f sc.yaml 
+  344  kubectl get pvc,pv
+  345  kubectl create -f claim1.yaml 
+  346  kubectl get pvc,pv
+  349  kubectl create -f claim2.yaml 
+  350  kubectl get pvc,pv
+  353  kubectl create -f rc-nginx.yaml 
+  354  kubectl get po
+  355  watch kubectl get po
+  356  kubectl describe rc server
+  357  kubectl describe po server-dghk5
+  370  history | grep kubectl > historial
